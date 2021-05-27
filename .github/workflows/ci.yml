@@ -34,13 +34,14 @@ jobs:
         run: |
           yamllint .
   molecule:
+    needs: lint
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
       matrix:
         distro:
           - amazonlinux2
-#          - centos7
+          - centos7
 #          - ubuntu1604
 #          - debian9
 

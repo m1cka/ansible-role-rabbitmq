@@ -15,5 +15,5 @@
 
   post_tasks:
     - name: check rabbitmq version
-      shell: 'rpm -qa |grep "rabbitmq-server-3.8.16-1.el7.noarch"'
+      shell: 'rpm -qa |grep "rabbitmq-server-3.8.16"'
       changed_when: False
