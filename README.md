@@ -1,5 +1,5 @@
 # RabbitMQ Ansible Role
-Forked from https://github.com/jasonroyle/ansible-role-rabbitmq on 2018-08-20
+Forked from https://github.com/anthemengineering/ansible-role-rabbitmq on 2021-05-27
 to support EL 7 and RabbitMQ 3.7+.
 
 ## Version
@@ -11,7 +11,7 @@ See:
 Set the `rabbitmq_version` variable to define the version of RabbitMQ to install.
 
 ```yaml
-rabbitmq_version: '3.8.1'
+rabbitmq_version: '3.8.16'
 ```
 
 ## Users

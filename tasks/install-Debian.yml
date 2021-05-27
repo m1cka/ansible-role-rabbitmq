@@ -1,3 +1,4 @@
+---
 - name: Add an apt key by id for rabbitmq
   apt_key:
     url: https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc

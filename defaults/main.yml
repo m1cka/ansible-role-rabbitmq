@@ -22,6 +22,8 @@ rabbitmq_version: '3.8.1'
 rabbitmq_vhosts: []
 rabbitmq_vhosts_absent: []
 
+rabbitmqadmin: false
+
 erlang_yum_baseurl: https://packagecloud.io/rabbitmq/erlang/el/7/$basearch
 erlang_yum_gpgcheck: false
 erlang_yum_repo_gpgkey: https://packagecloud.io/rabbitmq/erlang/gpgkey
