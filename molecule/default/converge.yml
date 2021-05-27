@@ -3,6 +3,8 @@
   hosts: all
   become: true
 
+  vars:
+    rabbitmqadmin: true
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=true cache_valid_time=600
@@ -10,3 +12,8 @@
 
   roles:
     - role: m1cka.ansible-role-rabbitmq
+
+  post_tasks:
+    - name: check rabbitmq version
+      shell: 'rpm -qa |grep "rabbitmq-server-3.8.16-1.el7.noarch"'
+      changed_when: False
