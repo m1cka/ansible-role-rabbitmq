@@ -15,5 +15,5 @@
 
   post_tasks:
     - name: check rabbitmq version
-      shell: 'rpm -qa |grep "rabbitmq-server-3.8.16"'
+      shell: rabbitmqctl --version
       changed_when: False
