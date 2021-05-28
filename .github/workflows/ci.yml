@@ -43,8 +43,8 @@ jobs:
           - amazonlinux2
           - centos7
           - centos8
-          - ubuntu1604
-          - debian9
+#          - ubuntu1604
+#          - debian9
 
 
     steps:
