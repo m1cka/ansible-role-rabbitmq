@@ -1,3 +1,5 @@
+[![CI Status](https://github.com/m1cka/ansible-role-rabbitmq/workflows/ci/badge.svg)](https://github.com/m1cka/ansible-role-rabbitmq/actions)
+
 # RabbitMQ Ansible Role
 Forked from https://github.com/anthemengineering/ansible-role-rabbitmq on 2021-05-27
 to support EL 7 and RabbitMQ 3.7+.
