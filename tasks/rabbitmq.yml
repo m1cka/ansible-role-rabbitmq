@@ -21,3 +21,10 @@
 
 - include: cluster.yml
   when: rabbitmq_cluster|bool and rabbitmq_nodename != rabbitmq_cluster_master
+
+- name: Download rabbitmqadmin
+  get_url:
+    url: http://127.0.0.1:15672/cli/rabbitmqadmin
+    dest: /bin/rabbitmqadmin
+    mode: '0755'
+  when: rabbitmqadmin|bool

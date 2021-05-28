@@ -1,0 +1,19 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    rabbitmqadmin: true
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+  roles:
+    - role: m1cka.ansible-role-rabbitmq
+
+  post_tasks:
+    - name: check rabbitmq version
+      shell: rabbitmqctl --version
+      changed_when: False
