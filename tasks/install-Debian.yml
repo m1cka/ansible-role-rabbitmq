@@ -3,31 +3,17 @@
   apt:
     name: apt-transport-https
 
-- name: Add an apt key by id for rabbitmq
-  apt_key:
-    url: https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc
+- name: Ensure erlang is installed.
+  package:
+    name: erlang
     state: present
+    
+- name: Download RabbitMQ package.
+  get_url:
+    url: "{{ rabbitmq_deb_url }}"
+    dest: "/tmp/{{ rabbitmq_deb }}"
 
-- name: Add apt repository for erlang
-  apt_repository:
-    repo: "deb http://dl.bintray.com/rabbitmq-erlang/debian {{ ansible_distribution_release }} erlang-{{ erlang_version|default('22.x') }}"
-    filename: rabbitmq_erlang
-    update_cache: no
-
-- name: Set package erlang preference
-  copy:
-    dest: /etc/apt/preferences.d/erlang
-    content: |
-      Package: erlang*
-      Pin: release o=Bintray
-      Pin-Priority: 1000
-- name: Add apt repository for rabbitmq
-  apt_repository:
-    repo: "deb https://dl.bintray.com/rabbitmq/debian {{ ansible_distribution_release }} main"
-    filename: rabbitmq_main
-    update_cache: yes
-
-- name: Install RabbitMQ
+- name: Ensure RabbitMQ is installed.
   apt:
-    name: "rabbitmq-server={{ rabbitmq_version }}"
+    deb: "/tmp/{{ rabbitmq_deb }}"
     state: present
