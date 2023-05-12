@@ -7,6 +7,7 @@
     gpgcheck: '{{ erlang_yum_gpgcheck }}'
     repo_gpgcheck: '{{ erlang_yum_repo_gpgcheck }}'
     gpgkey: '{{ erlang_yum_repo_gpgkey | default(omit, true) }}'
+
 - name: Configure RabbitMQ Yum repo
   yum_repository:
     name: rabbitmq
@@ -15,14 +16,15 @@
     gpgcheck: '{{ rabbitmq_yum_gpgcheck }}'
     repo_gpgcheck: '{{ rabbitmq_yum_repo_gpgcheck }}'
     gpgkey: '{{ rabbitmq_yum_repo_gpgkey | default(omit, true) }}'
+
 - name: Install RabbitMQ
   yum:
     name: rabbitmq-server-{{ rabbitmq_version }}
     state: present
     update_cache: true
 
-- name: Start rabbitmq-server
-  systemd:
-    name: rabbitmq-server
-    enabled: yes
-    state: started
+# name: Start rabbitmq-server
+#  systemd:
+#    name: rabbitmq-server
+#    enabled: yes
+#    state: started
