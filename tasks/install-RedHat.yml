@@ -23,8 +23,8 @@
     state: present
     update_cache: true
 
-# name: Start rabbitmq-server
-#  systemd:
-#    name: rabbitmq-server
-#    enabled: yes
-#    state: started
+- name: Start rabbitmq-server
+  systemd:
+    name: rabbitmq-server
+    enabled: yes
+    state: started
