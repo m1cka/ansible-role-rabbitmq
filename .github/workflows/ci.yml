@@ -43,7 +43,6 @@ jobs:
           - centos7
 #          - centos8
 #          - ubuntu1604
-          - debian9
           - debian11
 
 
