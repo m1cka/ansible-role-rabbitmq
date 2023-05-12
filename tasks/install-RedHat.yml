@@ -26,5 +26,5 @@
 - name: Start rabbitmq-server
   systemd:
     name: rabbitmq-server
-    enabled: yes
+    enabled: true
     state: started

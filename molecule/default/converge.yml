@@ -3,8 +3,8 @@
   hosts: all
   become: true
 
-  #vars:
-  #  rabbitmqadmin: true
+  vars:
+    rabbitmqadmin: true
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=true cache_valid_time=600
@@ -16,4 +16,4 @@
   post_tasks:
     - name: check rabbitmq version
       shell: rabbitmqctl --version
-      changed_when: False
+      changed_when: false
