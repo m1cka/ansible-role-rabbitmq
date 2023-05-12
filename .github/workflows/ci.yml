@@ -5,7 +5,6 @@ name: CI
   push:
     branches:
       - master
-    pull_request:
 
 defaults:
   run:
