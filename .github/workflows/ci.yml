@@ -44,7 +44,6 @@ jobs:
           # - amazonlinux2023
           - centos7
           # - centos8
-          - ubuntu2204
           - debian11
 
 
