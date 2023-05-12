@@ -37,9 +37,11 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         distro:
           - amazonlinux2
+          - amazonlinux2023
           - centos7
 #          - centos8
 #          - ubuntu1604

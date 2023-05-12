@@ -22,9 +22,3 @@
     name: rabbitmq-server-{{ rabbitmq_version }}
     state: present
     update_cache: true
-
-- name: Start rabbitmq-server
-  systemd:
-    name: rabbitmq-server
-    enabled: true
-    state: started
