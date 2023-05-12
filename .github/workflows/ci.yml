@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: 'm1cka.ansible-role-rabbitmq'
 
@@ -43,8 +43,8 @@ jobs:
           - amazonlinux2
           - centos7
           - centos8
-#          - ubuntu1604
-#          - debian9
+          - ubuntu1604
+          - debian9
 
 
     steps:
