@@ -43,7 +43,8 @@ jobs:
           - centos7
 #          - centos8
 #          - ubuntu1604
-#          - debian9
+          - debian9
+          - debian11
 
 
     steps:
@@ -58,7 +59,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install ansible molecule==4.0.3 molecule-plugins[docker] docker
+        run: pip3 install ansible molecule molecule-plugins[docker] docker
 
       - name: Run Molecule tests.
         run: molecule test
