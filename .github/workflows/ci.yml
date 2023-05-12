@@ -41,16 +41,16 @@ jobs:
       matrix:
         distro:
           - amazonlinux2
-          - amazonlinux2023
+          # - amazonlinux2023
           - centos7
-#          - centos8
-#          - ubuntu1604
+          # - centos8
+          - ubuntu2204
           - debian11
 
 
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: 'm1cka.ansible-role-rabbitmq'
 
