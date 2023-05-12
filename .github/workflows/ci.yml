@@ -42,9 +42,9 @@ jobs:
         distro:
           - amazonlinux2
           - centos7
-          - centos8
-          - ubuntu1604
-          - debian9
+#          - centos8
+#          - ubuntu1604
+#          - debian9
 
 
     steps:
@@ -59,7 +59,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install ansible molecule[docker] docker
+        run: pip3 install ansible molecule molecule-plugins[docker] docker
 
       - name: Run Molecule tests.
         run: molecule test
