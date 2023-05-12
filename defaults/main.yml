@@ -18,7 +18,7 @@ rabbitmq_users:
 rabbitmq_users_absent:
   - guest
 
-rabbitmq_version: '3.8.1'
+rabbitmq_version: '3.10.0'
 rabbitmq_vhosts: []
 rabbitmq_vhosts_absent: []
 

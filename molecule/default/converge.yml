@@ -16,4 +16,4 @@
   post_tasks:
     - name: check rabbitmq version
       shell: rabbitmqctl --version
-      changed_when: False
+      changed_when: false
